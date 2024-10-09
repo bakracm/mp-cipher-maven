@@ -2,12 +2,14 @@ package edu.grinnell.csc207.main;
 
 import java.io.PrintWriter;
 import edu.grinnell.csc207.util.CipherUtils;
+
 /**
  * All possible Caesar Cipher combinations of given word.
  *
  * @author Mina Bakrac
  */
 public class AllCaesar {
+
   /**
   * Encode or decode a word given as input for all keys a-z.
   *
