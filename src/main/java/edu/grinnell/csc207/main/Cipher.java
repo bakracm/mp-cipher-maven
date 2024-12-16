@@ -14,7 +14,7 @@ public class Cipher {
    * The required number of arguments.
    */
   static final int ARGSLEN = 4;
-  
+
   /**
   * Encode or decode a word given as input using any cipher.
   *
@@ -34,8 +34,7 @@ public class Cipher {
       for (int i = 0; i < args.length; i++) {
         if (args[i] == "") {
           noKey = 1;
-        } // if
-        if (args[i].charAt(0) == '-') {
+        } else if (args[i].charAt(0) == '-') {
           if (args[i] == "-encode") {
             encOrDec = "encode";
           } // if
@@ -61,7 +60,7 @@ public class Cipher {
       } // for
 
       if ((wordAndKey[0] == wordAndKey[0].toLowerCase()) && (hasSpace == 0)) {
-        if ((wordAndKey[1] == wordAndKey[1].toLowerCase()) && (noKey == 0)) {
+        if ((noKey == 0) && (wordAndKey[1] == wordAndKey[1].toLowerCase())) {
           if (cipherType != "") {
             if (encOrDec != "") {
               if ((cipherType == "caesar") && (wordAndKey[1].length() == 1)) {
